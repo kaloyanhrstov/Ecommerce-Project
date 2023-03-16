@@ -1,0 +1,91 @@
+
+<style>
+    html{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #7abecc !important;
+    }
+    .wrapper {
+    height: 400px;
+    width: 1000px;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 0 1.5px 3px gray;
+    margin: 30px auto 200px;
+}
+
+.albumCover, .profilePage {
+    float: left;
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+}
+
+.albumCover img, .profilePage img {
+    border-radius: 12px 0 0 7px;
+    height: 100%;
+}
+
+.albumText, .profileText {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.albumText h1, .profileText h1 {
+    color:gainsboro;
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.albumText h3 {
+    font-size: 18px;
+    color: gray;
+    letter-spacing: 0.2em;
+    margin: 8px 0 0 18px;
+}
+
+.albumText h4 {
+    margin: 8px 0 10px 18px;
+    font-size: 16px;
+    color: #9F9991;
+    letter-spacing: 0.2em;
+}
+
+.albumText h5 {
+    margin: 8px 0 10px 14px;
+    font-size: 16px;
+    color: white;
+}
+
+.albumText > p, .profileText > p {
+    height: auto;
+    width: 100%;
+    color: #9F9991;
+    line-height: 1.6em;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+</style>
+
+<section id="detailsPage">
+    <div class="wrapper">
+        <form method="post">
+            <div class="profilePage">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                     alt="Profile Image">
+            </div>
+
+            <div class="profileText">
+                <!-- Profile Info -->
+                {% csrf_token %}
+                {{ form }}
+            </div>
+
+
+            <button class="btn btn-lg btn-success" type="submit">Update Profile</button>
+
+        </form>
+    </div>
+</section>

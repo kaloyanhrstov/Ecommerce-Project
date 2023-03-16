@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demos.css' %}">
+</head>
+<body>
+    <div class="about">
+        <div class="inner-section">
+            <h1>About Us</h1>
+            <p class="text">
+                Ecom is a company that is engaged in the retail trade of quality timepieces with affordable prices.
+                We offer a variety of collections designed for clients who are looking for a timepiece that fits their personality.
+                Timekeeping functionality is important but we also consider a few selected features and appearances
+                in order to suit the needs and preferences of our customers.
+                Ecom makes sure to offer a perfect combination of competitive pricing
+                and excellent customer service in showcasing our brands such as Tissot, Alpina, Tommy Hilfiger, Leonard Montres and Aries Gold.
+            </p>
+            <div class="skills">
+                <a href="{% url 'store' %}">Back to Store</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
